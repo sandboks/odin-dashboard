@@ -15,7 +15,9 @@ body {
     background-color: #399bdd;
     color: white;
 
+    /*
     padding: 2em;
+    */
 }
 
 .menuRow img {
@@ -36,6 +38,7 @@ body {
 
 .menuRowHeader {
     grid-template-columns: 54px 1fr;
+    background-color: blue;
 }
 
 .mainSection {
