@@ -20,25 +20,36 @@ body {
     */
 }
 
-.menuRow img {
-    height: 24px;
+.menuRow img, .menuRowHeader img {
+    width: 24px;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(195deg) brightness(108%) contrast(104%);
 }
 
 .menuRowHeader img {
     width: 36px;
-    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(195deg) brightness(108%) contrast(104%);
 }
 
-.menuRow, .menuRowHeader {
+.menuRow {
+    height: 60px;
+}
+
+.menuRowContents {
     display: grid;
     grid-template-columns: 40px 1fr;
     align-items: center;
+
+    padding: 0 1em;
 }
 
 .menuRowHeader {
+    display: flex;
+    justify-content: center;
     grid-template-columns: 54px 1fr;
-    background-color: blue;
+}
+
+.menuRowHeaderContents {
+    display: flex;
+    gap: 0.5em;
 }
 
 .mainSection {
@@ -48,4 +59,9 @@ body {
 
 .projectsSection {
     background-color: #d6d6d6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
