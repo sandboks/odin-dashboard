@@ -105,12 +105,17 @@ input[type=text] {
 
 .topBannerMainLeft {
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
+    grid-template: 1fr / auto auto;
+    justify-content: start;
 }
 
 .topBannerMainLeftIcon {
     grid-row: 1 / 3;
+    /*
     contain: size;
+    */
+    height: 0;
+    min-height: 100%;
 }
 
 .topBannerMainLeftIcon img {
@@ -119,7 +124,13 @@ input[type=text] {
 
     border-radius: 50%;
 
+    overflow: auto;
 
+
+}
+
+.topBannerMainLeft p, .topBannerMainLeft h1 {
+    margin: 0;
 }
 
 .avatarAlertSection {
