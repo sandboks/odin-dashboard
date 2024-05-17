@@ -130,9 +130,13 @@ input[type=text] {
     margin: 0;
 }
 
-.avatarAlertSection {
+.avatarAlertSection, .avatarAlertSectionSmall {
     width: 40px;
     border-radius: 50%;
+}
+
+.avatarAlertSectionSmall {
+    width: 24px;
 }
 
 .topBannerMainLeftUsername {
@@ -152,7 +156,7 @@ input[type=text] {
     grid-template-columns: 1fr auto auto auto;
     justify-items: end;
     gap: 1em;
-    padding: 0 2em;
+    padding: 0 1em;
 }
 
 .topBannerMainRight button {
@@ -169,8 +173,69 @@ input[type=text] {
     height: 3em;
 }
 
-.projectsSection {
+.bottomSection {
     background-color: #d6d6d6;
+
+    display: grid;
+    grid-template: auto / 1fr auto;
+    padding: 2em;
+    gap: 2em;
+}
+
+.bottomSectionProjects {
+    display: grid;
+    grid-row: 1 / 3;
+}
+
+.bottomSectionProjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2em;
+}
+
+.bottomSectionProjectsPanel {
+    background-color: white;
+    border-radius: 1em;
+    overflow: hidden;
+
+
+}
+
+.bottomSectionProjectsPanelContent {
+    
+    padding: 1.5em;
+
+    height: 150px;
+    /*
+    max-height: 120px;
+    overflow: hidden;
+    */
+
+    border-left-color: #ffd100;
+    border-left-width: 1em;
+    /* border-left: 100px black; */
+    /* border-style: solid; */
+    border-left-style: solid;
+}
+
+.bottomSectionProjectsPanelIcons {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+}
+
+.bottomSectionProjectsPanel p {
+    margin: 0.5em 0;
+    max-height: 5.5em;
+    overflow: hidden;
+}
+
+.bottomSectionProjectsPanel h3 {
+    margin: 0;
+}
+
+.bottomSectionProjectsPanelIcons img {
+    width: 24px;
 }
 
 a {
