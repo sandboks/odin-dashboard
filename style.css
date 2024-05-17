@@ -64,11 +64,12 @@ body {
     display: grid;
 }
 
-.topBannerHeader {
+.topBannerHeader, .topBannerMain {
     display: grid;
     /* grid-auto-columns: auto; 
     grid-column: 1fr 1fr; */
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .topBannerAlerts {
@@ -77,7 +78,7 @@ body {
     justify-content: end;
     align-items: center;
     gap: 1em;
-    padding-right: 1em;
+    padding-right: 2em;
 }
 
 .topBannerSearch {
@@ -89,7 +90,7 @@ body {
     justify-content: start;
     align-items: center;
     gap: 1em;
-    padding-left: 1em;
+    padding-left: 2em;
 }
 
 input[type=text] {
@@ -110,7 +111,7 @@ input[type=text] {
     display: grid;
     grid-template: 1fr / auto auto;
     justify-content: start;
-    padding-left: 1em;
+    padding-left: 2em;
     gap: 1em;
 }
 
@@ -125,7 +126,7 @@ input[type=text] {
     border-radius: 50%;
 }
 
-.topBannerMainLeft p, .topBannerMainLeft h1 {
+.topBannerMainLeft p, .topBannerMainLeft h2 {
     margin: 0;
 }
 
@@ -143,6 +144,29 @@ input[type=text] {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.topBannerMainRight {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    justify-items: end;
+    gap: 1em;
+    padding: 0 2em;
+}
+
+.topBannerMainRight button {
+    padding: 12px 24px;
+    border-radius: 1.5em;
+    border: 0px;
+    text-decoration: none;
+    color: white;
+    background-color: #399bdd;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 7em;
+    height: 3em;
 }
 
 .projectsSection {
