@@ -6,7 +6,7 @@
     <title>Odin Dashboard</title>
 
     <link rel="stylesheet" href="./style.css">
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="gridContainer">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class="menuRow">
+                <div class="menuRow" id="noHighlight">
                     <!-- spacer between menu rows -->
                 </div>
 
@@ -174,49 +174,51 @@
                         </div>
                     </div>
                 </div>
-                <div class="bottomSectionAnnouncements">
-                    <h3>Announcements</h3>
-                    <div class="bottomSectionAnnouncementsBubble">
-                        <div class="bottomSectionAnnouncementsBubblePanel">
-                            <h4>Dashboard is live!</h4>
-                            <p>We're pleased to announce that the Odin Dashboard project v1.1 has been completed!</p>
-                        </div>
-                        <hr />
-                        <div class="bottomSectionAnnouncementsBubblePanel">
-                            <h4>Trending section</h4>
-                            <p>The trending section has been added, featuring some people you might know!</p>
-                        </div>
-                        <hr />
-                        <div class="bottomSectionAnnouncementsBubblePanel">
-                            <h4>Hello, world!</h4>
-                            <p>Testing goes here. Hooray for text and stuff.</p>
+                <div class="bottomSectionRight">
+                    <div class="bottomSectionAnnouncements">
+                        <h3>Announcements</h3>
+                        <div class="bottomSectionAnnouncementsBubble">
+                            <div class="bottomSectionAnnouncementsBubblePanel">
+                                <h4>Dashboard is live!</h4>
+                                <p>We're pleased to announce that the Odin Dashboard project v1.1 has been completed!</p>
+                            </div>
+                            <hr />
+                            <div class="bottomSectionAnnouncementsBubblePanel">
+                                <h4>Trending section</h4>
+                                <p>The trending section has been added, featuring some people you might know!</p>
+                            </div>
+                            <hr />
+                            <div class="bottomSectionAnnouncementsBubblePanel">
+                                <h4>Hello, world!</h4>
+                                <p>Testing goes here. Hooray for text and stuff.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bottomSectionTrending">
-                    <h3>Trending</h3>
-                    <div class="bottomSectionAnnouncementsBubble" id="TrendingBubble">
-                        <div class="bottomSectionTrendingPanel">
-                            <img src="img/avatarTom.jpg">
-                            <h4>@tom</h4>
-                            <p>Myspace</p>
-                        </div>
-                        <a href="https://github.com/sandboks">
+                    <div class="bottomSectionTrending">
+                        <h3>Trending</h3>
+                        <div class="bottomSectionAnnouncementsBubble" id="TrendingBubble">
                             <div class="bottomSectionTrendingPanel">
-                                <img src="img/avatar.png">
-                                <h4>@sandboks</h4>
-                                <p>Odin Dashboard</p>
+                                <img src="img/avatarTom.jpg">
+                                <h4>@tom</h4>
+                                <p>Myspace</p>
                             </div>
-                        </a>
-                        <div class="bottomSectionTrendingPanel">
-                            <img src="img/avatarToby.jpg">
-                            <h4>@tobyfox</h4>
-                            <p>Undertale</p>
-                        </div>
-                        <div class="bottomSectionTrendingPanel">
-                            <img src="img/avatarMiyamoto.png">
-                            <h4>@miyamoto</h4>
-                            <p>Nintendo</p>
+                            <a href="https://github.com/sandboks">
+                                <div class="bottomSectionTrendingPanel">
+                                    <img src="img/avatar.png">
+                                    <h4>@sandboks</h4>
+                                    <p>Odin Dashboard</p>
+                                </div>
+                            </a>
+                            <div class="bottomSectionTrendingPanel">
+                                <img src="img/avatarToby.jpg">
+                                <h4>@tobyfox</h4>
+                                <p>Undertale</p>
+                            </div>
+                            <div class="bottomSectionTrendingPanel">
+                                <img src="img/avatarMiyamoto.png">
+                                <h4>@miyamoto</h4>
+                                <p>Nintendo</p>
+                            </div>
                         </div>
                     </div>
                 </div>

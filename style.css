@@ -33,12 +33,33 @@ body {
     height: 60px;
 }
 
+.menuRow, .menuRowHeader {
+    background-color: #399bdd;
+    transition: .2s;
+
+    border-left: 0.3em solid transparent
+}
+
+.menuRow:hover, .menuRowHeader:hover {
+    /*background-color: #4b4e5a;*/
+    background-color: #67b2e4;
+    transition: .2s;
+
+    border-left: 0.3em solid #ffffff;
+    overflow: hidden;   
+}
+
+#noHighlight:hover  {
+    background-color: #399bdd;
+    border-left: 0.3em solid transparent
+}
+
 .menuRowContents {
     display: grid;
     grid-template-columns: 40px 1fr;
     align-items: center;
 
-    padding: 0 1em;
+    padding: 0 0.7em;
 }
 
 .menuRowHeader {
@@ -50,7 +71,7 @@ body {
 .menuRowHeaderContents {
     display: flex;
     gap: 0.5em;
-    padding-right: 0.8em;
+    padding-right: 1em;
 }
 
 .mainSection {
@@ -179,7 +200,7 @@ input[type=text] {
     background-color: #e3e8ee;
 
     display: grid;
-    grid-template: 1fr 1fr / 1fr 280px;
+    grid-template: 1fr / 1fr 280px;
     padding: 2em;
     gap: 2em;
 }
@@ -244,6 +265,12 @@ input[type=text] {
 
 .bottomSectionProjectsPanelIcons img {
     width: 24px;
+}
+
+.bottomSectionRight {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .bottomSectionAnnouncementsBubble, .bottomSectionTrendingBubble {
