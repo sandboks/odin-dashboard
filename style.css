@@ -1,3 +1,12 @@
+:root {
+    --main-color: #399bdd;
+    --main-color-highlight: #67b2e4;
+
+    --padding-amount: 2em;
+    --border-radius: 1em;
+    --transition-time: .2s;
+}
+
 body {
   margin: 0;  
   
@@ -12,11 +21,11 @@ body {
 }
 
 .leftMenu {
-    background-color: #399bdd;
+    background-color: var(--main-color);
     color: white;
 
     /*
-    padding: 2em;
+    padding: var(--padding-amount);
     */
 }
 
@@ -34,23 +43,23 @@ body {
 }
 
 .menuRow, .menuRowHeader {
-    background-color: #399bdd;
-    transition: .2s;
+    background-color: var(--main-color);
+    transition: var(--transition-time);
 
     border-left: 0.3em solid transparent
 }
 
 .menuRow:hover, .menuRowHeader:hover {
     /*background-color: #4b4e5a;*/
-    background-color: #67b2e4;
-    transition: .2s;
+    background-color: var(--main-color-highlight);
+    transition: var(--transition-time);
 
     border-left: 0.3em solid #ffffff;
     overflow: hidden;   
 }
 
 #noHighlight:hover  {
-    background-color: #399bdd;
+    background-color: var(--main-color);
     border-left: 0.3em solid transparent
 }
 
@@ -101,7 +110,7 @@ body {
     justify-content: end;
     align-items: center;
     gap: 1em;
-    padding-right: 2em;
+    padding-right: var(--padding-amount);
 }
 
 .topBannerSearch {
@@ -113,7 +122,7 @@ body {
     justify-content: start;
     align-items: center;
     gap: 1em;
-    padding-left: 2em;
+    padding-left: var(--padding-amount);
 }
 
 input[type=text] {
@@ -124,7 +133,7 @@ input[type=text] {
     margin-right: 16px;
     font-size: 17px;
 
-    border-radius: 1em;
+    border-radius: var(--border-radius);
     background-color: rgb(238, 238, 238);
     padding-left: 1em;
     margin: 0;
@@ -134,7 +143,7 @@ input[type=text] {
     display: grid;
     grid-template: 1fr / auto auto;
     justify-content: start;
-    padding-left: 2em;
+    padding-left: var(--padding-amount);
     gap: 1em;
 }
 
@@ -188,12 +197,18 @@ input[type=text] {
     border: 0px;
     text-decoration: none;
     color: white;
-    background-color: #399bdd;
+    background-color: var(--main-color);
     text-align: center;
     font-size: 16px;
     font-weight: bold;
     width: 7em;
     height: 3em;
+    transition: var(--transition-time);
+}
+
+.topBannerMainRight button:hover {
+    background-color: var(--main-color-highlight);
+    transition: var(--transition-time);
 }
 
 .bottomSection {
@@ -201,8 +216,8 @@ input[type=text] {
 
     display: grid;
     grid-template: 1fr / 1fr 280px;
-    padding: 2em;
-    gap: 2em;
+    padding: var(--padding-amount);
+    gap: var(--padding-amount);
 }
 
 .bottomSection h3 {
@@ -217,12 +232,12 @@ input[type=text] {
 .bottomSectionProjectsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2em;
+    gap: var(--padding-amount);
 }
 
 .bottomSectionProjectsPanel {
     background-color: white;
-    border-radius: 1em;
+    border-radius: var(--border-radius);
     overflow: hidden;
 
     box-shadow: 5px 5px 5px #00000021;
@@ -270,13 +285,13 @@ input[type=text] {
 .bottomSectionRight {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: var(--padding-amount);
 }
 
 .bottomSectionAnnouncementsBubble, .bottomSectionTrendingBubble {
     background-color: white;
-    border-radius: 1em;
-    padding: 2em;
+    border-radius: var(--border-radius);
+    padding: var(--padding-amount);
 
     box-shadow: 5px 5px 5px #00000021;
 }
