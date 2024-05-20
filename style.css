@@ -1,6 +1,7 @@
 :root {
     --main-color: #399bdd;
-    --main-color-highlight: #67b2e4;
+    --main-color-highlight: #ffffff36;
+    --main-color-projects: #e3e8ee;
 
     --padding-amount: 2em;
     --border-radius: 1em;
@@ -106,7 +107,7 @@ body {
 
 .topBannerAlerts {
     display: grid;
-    grid-template: 1fr / auto auto auto;
+    grid-template: 1fr / repeat(4, auto);
     justify-content: end;
     align-items: center;
     gap: 1em;
@@ -148,11 +149,6 @@ input[type=text] {
 }
 
 .topBannerMainLeft img {
-    /*
-    max-height: 100%;
-    aspect-ratio: 1/1;
-    overflow: auto;
-    */
 
     height: 80px;
     border-radius: 50%;
@@ -172,10 +168,6 @@ input[type=text] {
 }
 
 .topBannerMainLeftUsername {
-    /*
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    */
 
     display: flex;
     flex-direction: column;
@@ -190,6 +182,105 @@ input[type=text] {
     gap: 1em;
     padding: 0 1em;
 }
+
+.controlsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    border-radius: 20px;
+    padding: 6px;
+    background-color: var(--main-color-projects);
+}
+
+.colorPickWrapper {
+    height: 2em;
+    width: 2em;
+    overflow: hidden;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.colorPickWrapper  input[type=color] {
+    position: absolute;
+    height: 4em;
+    width: 4em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Slider toggles
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
+*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 
 .topBannerMainRight button {
     padding: 12px 24px;
@@ -207,12 +298,15 @@ input[type=text] {
 }
 
 .topBannerMainRight button:hover {
+    /*
     background-color: var(--main-color-highlight);
+    */
+    filter: brightness(120%);
     transition: var(--transition-time);
 }
 
 .bottomSection {
-    background-color: #e3e8ee;
+    background-color: var(--main-color-projects);
 
     display: grid;
     grid-template: 1fr / 1fr 280px;
