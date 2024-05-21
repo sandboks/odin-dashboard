@@ -1,7 +1,15 @@
 :root {
-    --main-color: #399bdd;
-    --main-color-highlight: #ffffff36;
+    --main-color: #F28E1C;
+    --border-highlight-color: #ffd100;
+;
+    --main-color-selection: #ffffff36;
     --main-color-projects: #e3e8ee;
+
+    --bg-darkmode: #3a3f47;
+    --bg-darkmode2: #2b2d30;
+
+    --font-color-softer: #6c6c6c;
+    --font-color-softer-dark: #d4d4d4;
 
     --padding-amount: 2em;
     --border-radius: 1em;
@@ -19,6 +27,18 @@ body {
     grid-template-columns: 300px minmax(300px, 1fr);
     
     height: 100vh;
+
+    background-color: white;
+    color: black;
+}
+
+.gridContainerDark {
+    background-color: var(--bg-darkmode);
+    color: white;
+}
+
+.gridContainerDark .bottomSectionProjectsPanelIcons img, .gridContainerDark .avatarAlertSectionSmall {
+    filter: invert(100%);
 }
 
 .leftMenu {
@@ -52,7 +72,7 @@ body {
 
 .menuRow:hover, .menuRowHeader:hover {
     /*background-color: #4b4e5a;*/
-    background-color: var(--main-color-highlight);
+    background-color: var(--main-color-selection);
     transition: var(--transition-time);
 
     border-left: 0.3em solid #ffffff;
@@ -94,6 +114,10 @@ body {
 
 .topBanner {
     display: grid;
+    /*
+    background-color: white;
+    color: black;
+    */
 }
 
 .topBannerHeader, .topBannerMain {
@@ -314,6 +338,15 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     gap: var(--padding-amount);
 }
 
+.bottomSectionDark {
+    background-color: var(--bg-darkmode2);
+    color: var(--font-color-softer);
+}
+
+.bottomSectionDark p {
+    color: var(--font-color-softer-dark);
+}
+
 .bottomSection h3 {
     margin-top: 0;
 }
@@ -337,6 +370,11 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     box-shadow: 5px 5px 5px #00000021;
 }
 
+.bottomSectionProjectsPanelDark {
+    background-color: var(--bg-darkmode);
+    color: white;
+}
+
 .bottomSectionProjectsPanelContent {
     
     padding: 1.5em;
@@ -347,7 +385,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     overflow: hidden;
     */
 
-    border-left-color: #ffd100;
+    border-left-color: var(--border-highlight-color);
     border-left-width: 1em;
     /* border-left: 100px black; */
     /* border-style: solid; */
@@ -365,7 +403,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     max-height: 5.5em;
     overflow: hidden;
 
-    color: #6c6c6c;
+    color: var(--font-color-softer);
 }
 
 .bottomSectionProjectsPanel h3 {
@@ -390,6 +428,11 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     box-shadow: 5px 5px 5px #00000021;
 }
 
+.bottomSectionAnnouncementsBubbleDark, .bottomSectionTrendingBubbleDark {
+    background-color: var(--bg-darkmode);
+    color: white;
+}
+
 #TrendingBubble {
     display: grid;
     gap: 1em;
@@ -406,7 +449,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
 
 .bottomSectionAnnouncementsBubble p {
     font-size: small;
-    color: #6c6c6c;
+    color: var(--font-color-softer);
 }
 
 .bottomSectionAnnouncementsBubble hr {
