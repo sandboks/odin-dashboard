@@ -164,6 +164,10 @@ input[type=text] {
     margin: 0;
 }
 
+.topBannerHeaderDark input[type=text] {
+    background-color: var(--bg-darkmode2);
+}
+
 .topBannerMainLeft {
     display: grid;
     grid-template: 1fr / auto auto;
@@ -215,7 +219,26 @@ input[type=text] {
 
     border-radius: 20px;
     padding: 6px;
+    /*
     background-color: var(--main-color-projects);
+    */
+}
+
+.darkModeContainer {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: var(--font-color-softer-dark);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.darkModeContainerDark {
+    background-color: var(--bg-darkmode2);
 }
 
 .colorPickWrapper {
@@ -239,6 +262,8 @@ input[type=text] {
     border: none;
     margin: 0;
     padding: 0;
+
+    cursor: pointer;
 }
 
 /*
@@ -319,6 +344,8 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     width: 7em;
     height: 3em;
     transition: var(--transition-time);
+
+    cursor: pointer;
 }
 
 .topBannerMainRight button:hover {

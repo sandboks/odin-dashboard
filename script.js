@@ -28,6 +28,8 @@ function RecolorCalculator() {
 const darkModeSwitch = document.querySelector("#darkModeToggle");
 darkModeSwitch.addEventListener("click", ToggleDarkMode)
 
+let darkMode = false;
+
 function ToggleDarkMode() {
     let gridContainer = document.querySelector(".gridContainer");
     gridContainer.classList.toggle("gridContainerDark");
@@ -43,15 +45,13 @@ function ToggleDarkMode() {
         bubble.classList.toggle("bottomSectionAnnouncementsBubbleDark");
     });
 
-    /*
-    let calculator = document.querySelector(".calcSection");
-    let content = document.querySelector(".content");
-    let buttonSection = document.querySelector(".buttonsSection");
-    let display = document.querySelector(".displayRow");
+    let banner = document.querySelector(".topBannerHeader");
+    banner.classList.toggle("topBannerHeaderDark");
 
-    calculator.classList.toggle("calcSectionDark");
-    content.classList.toggle("contentDark");
-    buttonSection.classList.toggle("buttonDark");
-    display.classList.toggle("displayRowDark");
-    */
+    let darkToggle = document.querySelector(".darkModeContainer");
+    darkToggle.classList.toggle("darkModeContainerDark");
+
+    darkMode = !darkMode;
+    let darkmodeIcon = document.querySelector("#darkmodeIcon");
+    darkmodeIcon.src = !darkMode ? "img/moon-waning-crescent.svg" : "img/white-balance-sunny.svg";
 }
