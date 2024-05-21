@@ -166,6 +166,7 @@ input[type=text] {
 
 .topBannerHeaderDark input[type=text] {
     background-color: var(--bg-darkmode2);
+    color: var(--font-color-softer-dark);
 }
 
 .topBannerMainLeft {
