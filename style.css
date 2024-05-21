@@ -9,7 +9,7 @@
     --bg-darkmode2: #2b2d30;
 
     --font-color-softer: #6c6c6c;
-    --font-color-softer-dark: #d4d4d4;
+    --font-color-softer-dark: #cecdcd;
 
     --padding-amount: 2em;
     --border-radius: 1em;
@@ -331,6 +331,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
 
 .bottomSection {
     background-color: var(--main-color-projects);
+    color: black;
 
     display: grid;
     grid-template: 1fr / 1fr 280px;
@@ -338,9 +339,13 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     gap: var(--padding-amount);
 }
 
+.bottomSection p {
+    color: var(--font-color-softer)
+}
+
 .bottomSectionDark {
     background-color: var(--bg-darkmode2);
-    color: var(--font-color-softer);
+    color: white;
 }
 
 .bottomSectionDark p {
@@ -402,8 +407,6 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     margin: 0.5em 0;
     max-height: 5.5em;
     overflow: hidden;
-
-    color: var(--font-color-softer);
 }
 
 .bottomSectionProjectsPanel h3 {
@@ -449,7 +452,6 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
 
 .bottomSectionAnnouncementsBubble p {
     font-size: small;
-    color: var(--font-color-softer);
 }
 
 .bottomSectionAnnouncementsBubble hr {
