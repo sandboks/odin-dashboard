@@ -6,7 +6,7 @@ A front-end layout for a project management website. The spec for this project c
 https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard
 
 # PREVIEW
-![](./preview.png)
+![](./preview.jpg)
 
 # FEATURES
 - Grid layout that responsively adjusts to the size of your browser (mobile not supported)
