@@ -4,6 +4,7 @@
 ;
     --main-color-selection: #ffffff36;
     --main-color-projects: #e3e8ee;
+    --main-color-light: rgb(238, 238, 238);
 
     --bg-darkmode: #3a3f47;
     --bg-darkmode2: #2b2d30;
@@ -159,7 +160,7 @@ input[type=text] {
     font-size: 17px;
 
     border-radius: var(--border-radius);
-    background-color: rgb(238, 238, 238);
+    background-color: var(--main-color-light);
     padding-left: 1em;
     margin: 0;
 }
@@ -229,7 +230,7 @@ input[type=text] {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background-color: var(--font-color-softer-dark);
+    background-color: var(--main-color-light);
 
     display: flex;
     justify-content: center;
@@ -425,6 +426,10 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
     border-left-style: solid;
 }
 
+.bottomSectionProjectsPanelContent #thumbnail {
+    width: 100%;
+}
+
 .bottomSectionProjectsPanelIcons {
     display: flex;
     justify-content: end;
@@ -433,7 +438,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
 
 .bottomSectionProjectsPanel p {
     margin: 0.5em 0;
-    max-height: 5.5em;
+    height: 5.5em;
     overflow: hidden;
 }
 
@@ -443,6 +448,12 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
 
 .bottomSectionProjectsPanelIcons img {
     width: 24px;
+    height: 24px;
+    /*
+    background-color: var(--main-color-light);
+    border-radius: 50%;
+    padding: 2px;
+    */
 }
 
 .bottomSectionRight {
